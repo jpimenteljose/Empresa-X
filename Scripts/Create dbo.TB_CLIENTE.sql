@@ -1,0 +1,20 @@
+﻿USE [BDEmpresaX]
+GO
+
+/****** Objeto: Table [dbo].[TB_CLIENTE] Data do Script: 30/05/2024 11:59:51 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TB_CLIENTE] (
+    [IDCLIENTE] INT            IDENTITY (1, 1) NOT NULL,
+    [NOME]      NVARCHAR (100) NULL,
+    [CPF]       NVARCHAR (14)  NULL,
+    [ENDERECO]  NVARCHAR (200) NULL,
+    [TELEFONE]  NVARCHAR (20)  NULL,
+    [EMAIL]     NVARCHAR (100) NULL
+);
+
+

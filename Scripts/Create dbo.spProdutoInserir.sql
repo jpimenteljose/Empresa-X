@@ -1,0 +1,31 @@
+﻿USE [BDEmpresaX]
+GO
+
+/****** Objeto: SqlProcedure [dbo].[spProdutoInserir] Data do Script: 30/05/2024 11:58:43 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+CREATE PROCEDURE spProdutoInserir
+(
+	@NOME nvarchar(50) = NULL,
+	@DESCRICAO nvarchar(100) = NULL,
+	@PRECO DECIMAL(10,2) = NULL,
+	@ESTOQUE INT = NULL,
+	@RESULT INT OUTPUT
+)
+AS
+BEGIN
+	INSERT INTO TB_PRODUTO (NOME, DESCRICAO, PRECO, ESTOQUE)
+	VALUES (@NOME, @DESCRICAO, @PRECO, @ESTOQUE)
+
+	SELECT @RESULT = SCOPE_IDENTITY();
+END

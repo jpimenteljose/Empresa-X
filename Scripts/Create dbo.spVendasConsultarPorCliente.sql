@@ -1,0 +1,32 @@
+﻿USE [BDEmpresaX]
+GO
+
+/****** Objeto: SqlProcedure [dbo].[spVendasConsultarPorCliente] Data do Script: 30/05/2024 11:59:04 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+
+
+
+
+
+CREATE PROCEDURE spVendasConsultarPorCliente
+(
+	@IDCLIENTE nvarchar(100) = NULL
+)
+AS
+BEGIN
+	SELECT V.IDVENDA,
+		   C.IDCLIENTE, C.NOME,
+		   P.IDPRODUTO, P.DESCRICAO
+	FROM   TB_VENDAS V, TB_CLIENTE C, TB_PRODUTO P
+	WHERE  V.IDCLIENTE = @IDCLIENTE
+	AND    V.IDCLIENTE = C.IDCLIENTE
+	AND    V.IDPRODUTO = P.IDPRODUTO;
+END
