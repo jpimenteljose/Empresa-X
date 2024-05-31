@@ -1,4 +1,5 @@
-Na  pasta "Scripts", estão os scripts para criação das tabelas TB_VENDAS, TB_CLIENTE e TB_PRODUTO, além dos scripts para criação das procedures usadas na aplicação:
+1. Criar o bando EmpresaX no SQL Server
+2. Na  pasta "Scripts", estão os scripts para criação das tabelas TB_VENDAS, TB_CLIENTE e TB_PRODUTO, além dos scripts para criação das procedures usadas na aplicação:
 
 Create dbo.TB_CLIENTE.sql
 Create dbo.TB_PRODUTO.sql
